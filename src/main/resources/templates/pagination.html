@@ -1,0 +1,44 @@
+<nav th:if="${shortUrls.totalPages > 1}" xmlns:th="http://www.w3.org/1999/xhtml">
+  <ul class="pagination justify-content-center">
+
+    <!-- First -->
+    <li class="page-item" th:classappend="${shortUrls.isFirst ? 'disabled' : ''}">
+      <a class="page-link"
+         th:href="@{${paginationUrl}(pageNo=1)}">
+        First
+      </a>
+    </li>
+
+    <!-- Previous -->
+    <li class="page-item" th:classappend="${shortUrls.isFirst ? 'disabled' : ''}">
+      <a class="page-link"
+         th:href="@{${paginationUrl}(pageNo=${shortUrls.pageNumber - 1})}">
+        Previous
+      </a>
+    </li>
+
+    <!-- Info -->
+    <li class="page-item disabled">
+      <span class="page-link"
+            th:text="'Page ' + ${shortUrls.pageNumber} + ' of ' + ${shortUrls.totalPages}
+             + ' (Total: ' + ${shortUrls.totalElements} + ')'">
+      </span>
+    </li>
+
+    <!-- Next -->
+    <li class="page-item" th:classappend="${shortUrls.isLast ? 'disabled' : ''}">
+      <a class="page-link"
+         th:href="@{${paginationUrl}(pageNo=${shortUrls.pageNumber + 1})}">
+        Next
+      </a>
+    </li>
+
+    <!-- Last -->
+    <li class="page-item" th:classappend="${shortUrls.isLast ? 'disabled' : ''}">
+      <a class="page-link"
+         th:href="@{${paginationUrl}(pageNo=${shortUrls.totalPages})}">
+        Last
+      </a>
+    </li>
+  </ul>
+</nav>
