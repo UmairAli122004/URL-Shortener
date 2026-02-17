@@ -93,10 +93,6 @@ public class ShortUrlService {
         String shortKey;
         do {
             shortKey = generateRandomShortKey();
-            /*
-             *  while (shortUrlRepository.existsByShortKey(shortKey));
-             * 👉 It keeps generating a random short key until it finds one that does NOT already exist in the database.
-             * */
         } while (shortUrlRepository.existsByShortKey(shortKey));
            return shortKey;
     }
