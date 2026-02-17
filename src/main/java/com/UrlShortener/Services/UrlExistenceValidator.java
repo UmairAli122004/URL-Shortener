@@ -19,10 +19,10 @@ public class UrlExistenceValidator {
             connection.setReadTimeout(5000);
 
             int responseCode = connection.getResponseCode();
-            return (responseCode >= 200 && responseCode < 400); // 2xx and 3xx are valid
+            return (responseCode >= 200 && responseCode < 400); 
         } catch (Exception e) {
             log.error("Error while checking URL: {}", urlString, e);
-            return false; // URL is invalid or not reachable
+            return false;
         }
     }
 }
