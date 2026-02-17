@@ -1,32 +1,19 @@
-/* =====================================
-   GLOBAL RESPONSIVE FIXES (NO HTML CHANGE)
-===================================== */
-
-/* Prevent horizontal scrolling on mobile */
 html, body {
     max-width: 100%;
     overflow-x: hidden;
 }
 
-/* Improve container behavior on all devices */
 .container {
     width: 100%;
     padding-left: 12px;
     padding-right: 12px;
 }
-
-/* Better spacing for small devices */
 @media (max-width: 576px) {
     body {
         padding-top: 70px;
     }
 }
 
-/* =====================================
-   NAVBAR RESPONSIVENESS
-===================================== */
-
-/* Ensure navbar content wraps correctly */
 .navbar-nav {
     text-align: center;
 }
@@ -37,41 +24,25 @@ html, body {
     }
 }
 
-/* =====================================
-   FORMS (MOBILE FRIENDLY)
-===================================== */
-
 input,
 select,
 textarea,
 button {
     max-width: 100%;
 }
-
-/* Touch-friendly buttons on mobile */
 @media (max-width: 576px) {
     .btn {
         width: 100%;
         margin-bottom: 8px;
     }
 }
-
-/* =====================================
-   TABLE RESPONSIVENESS
-===================================== */
-
-/* Smooth horizontal scrolling */
 .table-responsive {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
 }
-
-/* Prevent table content squeezing */
 table {
     min-width: 700px;
 }
-
-/* Smaller text & padding on tablets/mobiles */
 @media (max-width: 768px) {
     table th,
     table td {
@@ -79,11 +50,6 @@ table {
         padding: 0.5rem;
     }
 }
-
-/* =====================================
-   PAGINATION RESPONSIVENESS
-===================================== */
-
 .pagination {
     flex-wrap: wrap;
 }
@@ -91,11 +57,6 @@ table {
 .pagination .page-item {
     margin: 2px;
 }
-
-/* =====================================
-   CARDS & CONTENT
-===================================== */
-
 .card {
     width: 100%;
 }
@@ -103,18 +64,11 @@ table {
 .card-body {
     padding: 1rem;
 }
-
-/* Reduce large paddings on mobile */
 @media (max-width: 576px) {
     .p-5 {
         padding: 1.25rem !important;
     }
 }
-
-/* =====================================
-   JUMBOTRON / HERO SECTION
-===================================== */
-
 .jumbotron {
     padding: 1.5rem;
 }
@@ -124,10 +78,6 @@ table {
         padding: 3rem;
     }
 }
-
-/* =====================================
-   CENTER 404 PAGE WITHOUT HTML CHANGE
-===================================== */
 
 body > h1 {
     text-align: center;
