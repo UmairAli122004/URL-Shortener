@@ -32,7 +32,6 @@ public class WebSecurityConfig {
                                 "/", "/short-urls", "/s/**", "/register", "/login"
                         ).permitAll()
                         .requestMatchers("/my-urls").authenticated()
-                      //  .requestMatchers("/admin/**").hasRole("ADMIN")
                         .anyRequest().authenticated()
                 )
                 .formLogin(form -> form
